@@ -3,7 +3,7 @@
 Slightly better version of the xinput implementation for unity based on the amazing work done by speps (https://github.com/speps/XInputDotNet), allows to control four gamepads with a very simple to use API and easily map computer inputs to gamepad button using a custom inspector.
 
 ##How to use :
-Simply drag the **"LaunchGamePadController"** script in on any object in your scene (preferably an empty). Then in your character controller script for instance, add the following :
+Simply drag the **"LaunchGamePadController"** script on any object in your scene (preferably an empty). Then in your character controller script for instance, add the following :
 ```
 GamePadController.Controller gamePad; //Declaring a variable for our gamepad
 void Start()
@@ -28,12 +28,12 @@ gamePad.SetVibration(100,100) //for 100% intensity on both motors
 gamePad.StopVibration() //to stop the vibration
 gamePad.SetVibration(100,100,5) //to have the gamepad vibrate for 5 seconds then stop
 ```
-You can also very easily map computer inputs to the gamepad inputs, that way the 'v' key of your keyboard will represent the A button of your gamePad :
+You can also very easily map computer inputs to the gamepad inputs, for example, the 'v' key of your keyboard could represent the A button of your gamePad, that way :
 ```
 if(gamePad.A.Pressed)
     Debug.Log("Pressed")
 ```   
-that way this code will allow you to have both inputs (computer and gamepad) working at the same time or only one at a time (if the gamePad is not connected) with a single line of code.
+this code will allow you to have both inputs (computer and gamepad) working at the same time or only one at a time (if the gamePad is not connected) with a single line of code.
 
 ```
 //--> Additional Objectives
@@ -50,6 +50,5 @@ that way this code will allow you to have both inputs (computer and gamepad) wor
 //Add other default Parameters (Ex : LeftStick X&Y already have Horizontal and Vertical written, etc...)
 //Add smart autocomplete
 //Use custom editor for "enable controller"
-//Use structs (same as GamePadController) for computer inputs
 //Save/Load preconfigured inputs in a file
 ```
